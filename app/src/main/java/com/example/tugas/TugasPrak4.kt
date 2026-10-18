@@ -116,6 +116,27 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     verticalArrangement = Arrangement.Top,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+                    // Judul Form Biodata
+                    Text(
+                        text = stringResource(id = R.string.form_title),
+                        style = MaterialTheme.typography.headlineSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.form_title_purple),
+                        textAlign = TextAlign.Center
+                    )
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+
+                    // Subtitle Form
+                    Text(
+                        text = stringResource(id = R.string.form_subtitle),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = colorResource(id = R.color.form_subtitle_gray),
+                        textAlign = TextAlign.Center
+                    )
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
+
                 }
             }
         }
