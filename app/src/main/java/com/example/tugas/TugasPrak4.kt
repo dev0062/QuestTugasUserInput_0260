@@ -328,6 +328,56 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         thickness = dimensionResource(id = R.dimen.divider_tipis),
                         color = colorResource(id = R.color.divider_gray)
                     )
+
+                    // Card Hasil Output Warna Orange dan Memiliki Shadow Elevation
+                    if (isSubmitted) {
+                        ElevatedCard(
+                            elevation = CardDefaults.cardElevation(
+                                defaultElevation = dimensionResource(id = R.dimen.card_elevation)
+                            ),
+                            colors = CardDefaults.cardColors(
+                                containerColor = colorResource(id = R.color.orange_card)
+                            ),
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.output_card_corner_radius)),
+                            modifier = Modifier
+                                .width(dimensionResource(id = R.dimen.card_output_width))
+                                .padding(bottom = dimensionResource(id = R.dimen.padding_large))
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium))
+                            ) {
+                                Text(
+                                    text = stringResource(id = R.string.output_nama, nama),
+                                    color = colorResource(id = R.color.card_text_white),
+                                    fontWeight = FontWeight.SemiBold
+                                )
+                                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+                                Text(
+                                    text = stringResource(id = R.string.output_email, email),
+                                    color = colorResource(id = R.color.card_text_white),
+                                    fontWeight = FontWeight.SemiBold
+                                )
+                                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+                                Text(
+                                    text = stringResource(id = R.string.output_tgl_lahir, tglLahir),
+                                    color = colorResource(id = R.color.card_text_white),
+                                    fontWeight = FontWeight.SemiBold
+                                )
+                                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+                                Text(
+                                    text = stringResource(id = R.string.output_experience, experience),
+                                    color = colorResource(id = R.color.card_text_white),
+                                    fontWeight = FontWeight.SemiBold
+                                )
+                                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+                                Text(
+                                    text = stringResource(id = R.string.output_skill, skill),
+                                    color = colorResource(id = R.color.card_text_white),
+                                    fontWeight = FontWeight.SemiBold
+                                )
+                            }
+                        }
+                    }
                 }
             }
         }
