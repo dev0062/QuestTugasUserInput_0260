@@ -71,4 +71,29 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     val strUIUX = stringResource(id = R.string.skill_uiux)
     val strWeb = stringResource(id = R.string.skill_web)
 
+    Scaffold(
+        modifier = modifier.fillMaxSize()
+    ) { innerPadding ->
+        // Komponen Box mengapung di atas Scaffold
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            // Gambar Background Header UMY
+            Surface(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(id = R.dimen.header_height)),
+                color = Color(0xFF004D21) // Warna hijau UMY sebagai base
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.header_umy),
+                    contentDescription = stringResource(id = R.string.header_desc),
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Fit // Fit agar logonya tidak terpotong
+                )
+            }
+        }
+    }
 }
