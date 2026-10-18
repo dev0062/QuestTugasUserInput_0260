@@ -4,4 +4,11 @@
     <string name="proceed">Proceed</string>
     <string name="form_title">Form Biodata</string>
     <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="label_nama_depan">Nama Depan</string>
+    <string name="label_nama_belakang">Nama Belakang</string>
+    <string name="label_nama_lengkap">Nama Lengkap</string>
+    <string name="label_email">Email</string>
+    <string name="label_alamat">Alamat</string>
+    <string name="label_tgl_lahir">Tgl Lahir</string>
+    <string name="label_experience">Experience</string>
 </resources>
