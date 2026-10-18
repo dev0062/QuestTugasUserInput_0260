@@ -53,4 +53,22 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     var textTglLahir by remember { mutableStateOf("") }
     var textExperience by remember { mutableStateOf("") }
 
+    // Variabel untuk Checkbox Skills
+    var skillAndroid by remember { mutableStateOf(false) }
+    var skillUIUX by remember { mutableStateOf(false) }
+    var skillWeb by remember { mutableStateOf(false) }
+
+    // Variabel-variabel untuk menyimpan data output
+    var nama by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var tglLahir by remember { mutableStateOf("") }
+    var experience by remember { mutableStateOf("") }
+    var skill by remember { mutableStateOf("") }
+    var isSubmitted by remember { mutableStateOf(false) }
+    
+    // Resource strings untuk skills
+    val strAndroid = stringResource(id = R.string.skill_android)
+    val strUIUX = stringResource(id = R.string.skill_uiux)
+    val strWeb = stringResource(id = R.string.skill_web)
+
 }
