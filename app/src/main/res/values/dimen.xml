@@ -11,4 +11,11 @@
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="margin_large">24dp</dimen>
+
+    <dimen name="divider_tipis">1dp</dimen>
+    <dimen name="card_elevation">12dp</dimen>
+    <dimen name="form_card_corner_radius">32dp</dimen>
+    <dimen name="output_card_corner_radius">16dp</dimen>
+    <dimen name="field_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
 </resources>
