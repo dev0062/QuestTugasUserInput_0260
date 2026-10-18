@@ -228,6 +228,64 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     }
 
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
+
+                    // Label Pilih Skill Anda
+                    Text(
+                        text = stringResource(id = R.string.label_pilih_skill),
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = colorResource(id = R.color.text_black),
+                        modifier = Modifier.width(dimensionResource(id = R.dimen.field_width_full))
+                    )
+
+                    // Pilihan Checkbox Skill
+                    Row(
+                        modifier = Modifier.width(dimensionResource(id = R.dimen.field_width_full)),
+                        horizontalArrangement = Arrangement.Start,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Checkbox Android
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = skillAndroid,
+                                onCheckedChange = { skillAndroid = it },
+                                colors = CheckboxDefaults.colors(checkedColor = colorResource(id = R.color.form_title_purple))
+                            )
+                            Text(text = stringResource(id = R.string.skill_android), color = colorResource(id = R.color.text_black))
+                        }
+                        
+                        Spacer(modifier = Modifier.width(dimensionResource(id = R.dimen.spacer_small)))
+
+                        // Checkbox UI/UX
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = skillUIUX,
+                                onCheckedChange = { skillUIUX = it },
+                                colors = CheckboxDefaults.colors(checkedColor = colorResource(id = R.color.form_title_purple))
+                            )
+                            Text(text = stringResource(id = R.string.skill_uiux), color = colorResource(id = R.color.text_black))
+                        }
+
+                        Spacer(modifier = Modifier.width(dimensionResource(id = R.dimen.spacer_small)))
+
+                        // Checkbox Web
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = skillWeb,
+                                onCheckedChange = { skillWeb = it },
+                                colors = CheckboxDefaults.colors(checkedColor = colorResource(id = R.color.form_title_purple))
+                            )
+                            Text(text = stringResource(id = R.string.skill_web), color = colorResource(id = R.color.text_black))
+                        }
+                    }
+
+                    HorizontalDivider(
+                        modifier = Modifier.padding(
+                            vertical = dimensionResource(id = R.dimen.padding_medium)
+                        ),
+                        thickness = dimensionResource(id = R.dimen.divider_tipis),
+                        color = colorResource(id = R.color.divider_gray)
+                    )
                 }
             }
         }
