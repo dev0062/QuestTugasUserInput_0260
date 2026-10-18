@@ -18,4 +18,12 @@
     <dimen name="output_card_corner_radius">16dp</dimen>
     <dimen name="field_corner_radius">12dp</dimen>
     <dimen name="button_corner_radius">12dp</dimen>
+
+    <dimen name="header_height">250dp</dimen>
+    <dimen name="form_overlap_offset">180dp</dimen>
+    <dimen name="field_width_full">300dp</dimen>
+    <dimen name="field_width_half">144dp</dimen>
+    <dimen name="card_output_width">300dp</dimen>
+    <dimen name="card_output_min_height">100dp</dimen>
+    <dimen name="button_height">48dp</dimen>
 </resources>
