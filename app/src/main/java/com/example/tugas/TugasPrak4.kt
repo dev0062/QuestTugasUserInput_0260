@@ -167,6 +167,22 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     }
 
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+
+                    // Input Email (Full Width)
+                    OutlinedTextField(
+                        value = textEmail,
+                        singleLine = true,
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.field_corner_radius)),
+                        modifier = Modifier.width(dimensionResource(id = R.dimen.field_width_full)),
+                        label = { Text(text = stringResource(id = R.string.label_email)) },
+                        onValueChange = { textEmail = it },
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedBorderColor = colorResource(id = R.color.form_title_purple),
+                            unfocusedBorderColor = colorResource(id = R.color.border_gray)
+                        )
+                    )
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
                 }
             }
         }
