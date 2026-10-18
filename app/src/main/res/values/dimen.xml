@@ -26,4 +26,11 @@
     <dimen name="card_output_width">300dp</dimen>
     <dimen name="card_output_min_height">100dp</dimen>
     <dimen name="button_height">48dp</dimen>
+
+    <dimen name="spacer_small">8dp</dimen>
+    <dimen name="spacer_medium">16dp</dimen>
+    <dimen name="spacer_large">24dp</dimen>
+
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="header_logo_size">120dp</dimen>
 </resources>
