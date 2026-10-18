@@ -206,7 +206,28 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                             )
                         )
                         Spacer(modifier = Modifier.width(dimensionResource(id = R.dimen.spacer_small)))
+                        OutlinedTextField(
+                            value = textExperience,
+                            singleLine = true,
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.field_corner_radius)),
+                            modifier = Modifier.weight(1f),
+                            label = { Text(text = stringResource(id = R.string.label_experience)) },
+                            onValueChange = { textExperience = it },
+                            trailingIcon = {
+                                Icon(
+                                    painter = painterResource(id = R.drawable.ic_arrow_drop_down),
+                                    contentDescription = stringResource(id = R.string.dropdown_desc),
+                                    tint = colorResource(id = R.color.dark_gray)
+                                )
+                            },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                focusedBorderColor = colorResource(id = R.color.form_title_purple),
+                                unfocusedBorderColor = colorResource(id = R.color.border_gray)
+                            )
+                        )
                     }
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
                 }
             }
         }
