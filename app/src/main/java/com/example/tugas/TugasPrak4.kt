@@ -137,6 +137,36 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
 
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
 
+                    // Input Nama Depan & Nama Belakang (Sejajar / Row)
+                    Row(modifier = Modifier.width(dimensionResource(id = R.dimen.field_width_full))) {
+                        OutlinedTextField(
+                            value = textNamaDepan,
+                            singleLine = true,
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.field_corner_radius)),
+                            modifier = Modifier.weight(1f),
+                            label = { Text(text = stringResource(id = R.string.label_nama_depan)) },
+                            onValueChange = { textNamaDepan = it },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                focusedBorderColor = colorResource(id = R.color.form_title_purple),
+                                unfocusedBorderColor = colorResource(id = R.color.border_gray)
+                            )
+                        )
+                        Spacer(modifier = Modifier.width(dimensionResource(id = R.dimen.spacer_small)))
+                        OutlinedTextField(
+                            value = textNamaBelakang,
+                            singleLine = true,
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.field_corner_radius)),
+                            modifier = Modifier.weight(1f),
+                            label = { Text(text = stringResource(id = R.string.label_nama_belakang)) },
+                            onValueChange = { textNamaBelakang = it },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                focusedBorderColor = colorResource(id = R.color.form_title_purple),
+                                unfocusedBorderColor = colorResource(id = R.color.border_gray)
+                            )
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
                 }
             }
         }
