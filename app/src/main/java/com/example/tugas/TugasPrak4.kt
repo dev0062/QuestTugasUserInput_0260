@@ -286,6 +286,48 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         thickness = dimensionResource(id = R.dimen.divider_tipis),
                         color = colorResource(id = R.color.divider_gray)
                     )
+
+                    // Tombol Submit
+                    Button(
+                        modifier = Modifier
+                            .width(dimensionResource(id = R.dimen.field_width_full))
+                            .height(dimensionResource(id = R.dimen.button_height)),
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.button_corner_radius)),
+                        // Button aktif bila setidaknya Nama Depan terisi
+                        enabled = textNamaDepan.isNotEmpty(),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.button_bg_active),
+                            disabledContainerColor = colorResource(id = R.color.button_bg_disabled)
+                        ),
+                        onClick = {
+                            nama = "$textNamaDepan $textNamaBelakang".trim()
+                            email = textEmail
+                            tglLahir = textTglLahir
+                            experience = textExperience
+                            
+                            val selectedSkills = mutableListOf<String>()
+                            if (skillAndroid) selectedSkills.add(strAndroid)
+                            if (skillUIUX) selectedSkills.add(strUIUX)
+                            if (skillWeb) selectedSkills.add(strWeb)
+                            skill = if (selectedSkills.isEmpty()) "-" else selectedSkills.joinToString(", ")
+                            
+                            isSubmitted = true
+                        }
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.submit),
+                            style = MaterialTheme.typography.bodyLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    HorizontalDivider(
+                        modifier = Modifier.padding(
+                            vertical = dimensionResource(id = R.dimen.padding_medium)
+                        ),
+                        thickness = dimensionResource(id = R.dimen.divider_tipis),
+                        color = colorResource(id = R.color.divider_gray)
+                    )
                 }
             }
         }
