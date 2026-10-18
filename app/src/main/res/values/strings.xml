@@ -18,4 +18,14 @@
     <string name="skill_android">Android</string>
     <string name="skill_uiux">UI/UX</string>
     <string name="skill_web">Web</string>
+    <string name="output_nama">Nama : %1$s</string>
+    <string name="output_gender">Gender: %1$s</string>
+    <string name="output_alamat">Alamat : %1$s</string>
+    <string name="output_email">Email : %1$s</string>
+    <string name="output_tgl_lahir">Tgl Lahir : %1$s</string>
+    <string name="output_experience">Experience : %1$s</string>
+    <string name="output_skill">Skill : %1$s</string>
+    <string name="header_desc">Header Background</string>
+    <string name="calendar_desc">Calendar Icon</string>
+    <string name="dropdown_desc">Dropdown Icon</string>
 </resources>
