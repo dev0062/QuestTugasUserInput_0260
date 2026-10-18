@@ -94,6 +94,30 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     contentScale = ContentScale.Fit // Fit agar logonya tidak terpotong
                 )
             }
+
+            // Card Form mengapung di atas Scaffold/Header
+            Surface(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = dimensionResource(id = R.dimen.form_overlap_offset)),
+                shape = RoundedCornerShape(
+                    topStart = dimensionResource(id = R.dimen.form_card_corner_radius),
+                    topEnd = dimensionResource(id = R.dimen.form_card_corner_radius)
+                ),
+                color = colorResource(id = R.color.white),
+                shadowElevation = dimensionResource(id = R.dimen.card_elevation)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(horizontal = dimensionResource(id = R.dimen.padding_large))
+                        .padding(top = dimensionResource(id = R.dimen.padding_top_form))
+                        .verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.Top,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                }
+            }
         }
     }
 }
